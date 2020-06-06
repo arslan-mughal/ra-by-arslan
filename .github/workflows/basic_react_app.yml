@@ -1,28 +1,38 @@
-name: Deploying Basic React App
+Name: Basic React App
 
-
-on: [push]
-
-jobs:
+on:
+  push:
+    branches: [master]
+    pull_request:
+    branches: [master]
+    
+Jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        
-      - name: install NodeJS
-        uses: actions/setup-node@v2-beta
-        with:
-          node-version: 12
+    
+steps:
+    - uses: actions/checkout@v2
       
-      - uses: borales/actions-yarn@v2.0.0
-       with:
-          cmd: install
-          
-      - name: Build React App
+      #Install NodeJS
+    - name: Install NodeJS
+      uses: actions/setup-node@v2-beta
+        with:
+            node-version: 12
+            
+      #Install Yarn
+      - name : Install Yarn
+        uses : borales/actions-yarn@v2.0.0
+         with:
+           cmd: install
+           
+      #Build React App with Yarn
+      - name: Build react app with yarn
         run: yarn build
         
+      #Surge Installation
       - name: Install Surge
-        run: npm install -global surge
+        run : npm install --global surge
         
-      - name: Deploy to Surge
-        run: surge ./build ra-by-arslan.surge.sh --token ${{secrets.BASCI_REACT_APP}}
+      #Surge Deployment
+      - name: Deploy React App to Surge
+        run: surge ./build ra-arslan.surge.sh --token ${{ secrets.BASCI_REACT_APP}}

@@ -12,6 +12,8 @@ function App() {
         </p>
         <br />
         <p>Hello, World! By Muhammad Arslan Bashir.</p>
+        <br />
+        <p>Please stay at your home and stay safe from COVID-19</p>
         <a
           className="App-link"
           href="https://reactjs.org"

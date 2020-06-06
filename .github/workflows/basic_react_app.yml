@@ -6,13 +6,14 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Deploying to surge
     steps:
       - uses: actions/checkout@v2
-      - name: install node.js
+        
+      - name: install NodeJS
         uses: actions/setup-node@v2-beta
         with:
           node-version: 12
+      
       - uses: borales/actions-yarn@v2.0.0
        with:
           cmd: install
@@ -24,4 +25,4 @@ jobs:
         run: npm install -global surge
         
       - name: Deploy to Surge
-        run: surge ./build ra-by-arslan.surge.sh --token ${{BASCI_REACT_APP}}
+        run: surge ./build ra-by-arslan.surge.sh --token ${{secrets.BASCI_REACT_APP}}

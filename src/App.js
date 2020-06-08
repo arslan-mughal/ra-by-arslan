@@ -1,30 +1,58 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './custom.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <br />
-        <p>Hello, World! By Muhammad Arslan Bashir.</p>
-        <br />
-        <p>Please stay at your home and stay safe from COVID-19</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function Hi() {
+  return <div>
+    <strong>Hello, Muhammad Arslan Bashir {10+50}</strong>
+    <br /><br /><br />
+    <div id="div2">Unordered List With Style Types</div>
+      <ul id="ulcircle">
+        <li>Karachi</li>
+        <li>Lahore</li>
+        <li>Faisalabad</li>
+        <li>Islamabad</li>
+      </ul>
+
+      <ul id="ulsquare">
+      <li>Karachi</li>
+        <li>Lahore</li>
+        <li>Faisalabad</li>
+        <li>Islamabad</li>
+      </ul>
+
+      <ul id="ulbullet">
+        <li>Karachi</li>
+        <li>Lahore</li>
+        <li>Faisalabad</li>
+        <li>Islamabad</li>
+      </ul>
+      <div id="div2">Ordered List With Style Types</div>
+      <ol type="A">
+        <li>Karachi</li>
+        <li>Lahore</li>
+        <li>Faisalabad</li>
+        <li>Islamabad</li>
+      </ol>
+      <ol type="a">
+        <li>Karachi</li>
+        <li>Lahore</li>
+        <li>Faisalabad</li>
+        <li>Islamabad</li>
+      </ol>
+      <ol type="i">
+        <li>Karachi</li>
+        <li>Lahore</li>
+        <li>Faisalabad</li>
+        <li>Islamabad</li>
+      </ol>
+      <ol type="I">
+        <li>Karachi</li>
+        <li>Lahore</li>
+        <li>Faisalabad</li>
+        <li>Islamabad</li>
+      </ol>
+  </div>
 }
 
-export default App;
+export default Hi;
